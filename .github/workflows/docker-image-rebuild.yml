@@ -16,16 +16,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+
     - name: docker login
       env:
         DOCKER_USER: ${{secrets.DOCKER_USER}}
         DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
       run: |
         docker login -u $DOCKER_USER  -p $DOCKER_PASSWORD
-    - name: Build the Docker image
+
+    - name: Build and Push the Docker image to DockerHub
       run: |
         src/build-push-ceph-container-imgs-quincy.sh
         src/build-push-ceph-container-imgs-pacific.sh
-    - name: Docker Push
-      run: docker push dexter816/temp-repo:v17
 
