@@ -1,7 +1,7 @@
 ARG CEPH_POINT_RELEASE
 FROM quay.io/ceph/ceph:$CEPH_POINT_RELEASE
 
-RUN dnf -y update && dnf install -y python3-pip xmlsec1 xmlsec1-nss xmlsec1-openssl
+RUN dnf install -y python3-pip xmlsec1 xmlsec1-nss xmlsec1-openssl
 RUN pip3 install python3-saml
 
 # Clean container, starting with record of current size (strip / from end)
