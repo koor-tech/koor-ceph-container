@@ -26,6 +26,6 @@ jobs:
 
     - name: Build and Push the Docker image to DockerHub
       run: |
-        src/build-push-ceph-container-imgs-quincy.sh
-        src/build-push-ceph-container-imgs-pacific.sh
+        source .env && src/build-push-ceph-container-imgs-quincy.sh
+        source .env && src/build-push-ceph-container-imgs-pacific.sh
 
