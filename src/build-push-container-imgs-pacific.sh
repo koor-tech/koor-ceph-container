@@ -13,5 +13,5 @@ CEPH_POINT_RELEASE=$(curl -s -L \
 		 | grep $VERSION_REGEX \
 		 | head -n 1)
 
-CEPH_POINT_RELEASE=$CEPH_POINT_RELEASE $basename/build-push-ceph-container-imgs-base.sh
+CEPH_POINT_RELEASE=$CEPH_POINT_RELEASE $basename/build-push-container-imgs-base.sh
 

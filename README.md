@@ -1,4 +1,4 @@
-# ceph-container
+# koor-ceph-container
 
 Additional dependencies packaging for making enhanced features available in
 Ceph.
