@@ -1,12 +1,12 @@
 ARG CEPH_POINT_RELEASE
 FROM quay.io/ceph/ceph:$CEPH_POINT_RELEASE
 
-RUN dnf install -y python3-pip xmlsec1 xmlsec1-nss xmlsec1-openssl
-RUN pip3 install python3-saml
-
-# Clean container, starting with record of current size (strip / from end)
-RUN INITIAL_SIZE="$(bash -c 'sz="$(du -sm --exclude=/proc /)" ; echo "${sz%*/}"')" && \
-    # Clean common files like /tmp, /var/lib, etc. \
+# Install the SSO packages and then clean container,
+# starting with record of current size (strip / from end)
+RUN dnf install -y python3-pip xmlsec1 xmlsec1-nss xmlsec1-openssl && \
+    pip3 install python3-saml && \
+    INITIAL_SIZE="$(bash -c 'sz="$(du -sm --exclude=/proc /)" ; echo "${sz%*/}"')" && \
+    # Clean common files like /tmp, /var/lib, \
     yum clean all && rm -rf \
         /etc/{selinux,systemd,udev} \
         /lib/{lsb,udev} \
