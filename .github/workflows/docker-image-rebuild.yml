@@ -1,15 +1,9 @@
 name: Docker Image Rebuild on a CRON Schedule
 
 on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
-
-#on:
-#  schedule:
-#    # Runs "At 12:59 on Friday" (see https://crontab.guru)
-#    - cron: '59 12 * * 5'
+  schedule:
+    # Runs "At 12:59 on Friday" (see https://crontab.guru)
+    - cron: '59 12 * * 5'
 
 jobs:
   build:
