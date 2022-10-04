@@ -11,6 +11,11 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
+    - name: Setup env file
+      uses: c-py/action-dotenv-to-setenv@v2
+      with:
+        env-file: .env
+
     - name: docker login
       env:
         DOCKER_USER: ${{secrets.DOCKER_USER}}
@@ -20,6 +25,6 @@ jobs:
 
     - name: Build and Push the Docker image to DockerHub
       run: |
-        source .env && src/build-push-container-imgs-quincy.sh
-        source .env && src/build-push-container-imgs-pacific.sh
+        src/build-push-container-imgs-quincy.sh
+        src/build-push-container-imgs-pacific.sh
 
