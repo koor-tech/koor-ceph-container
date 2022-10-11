@@ -2,8 +2,8 @@ name: Docker Image Rebuild on a CRON Schedule
 
 on:
   schedule:
-    # Runs "At 12:59 on Friday" (see https://crontab.guru)
-    - cron: '59 12 * * 5'
+    # Runs "At 11:45 every day" (see https://crontab.guru)
+    - cron: '45 11 * * *'
 
 jobs:
   build:
