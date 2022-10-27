@@ -7,6 +7,10 @@ Added library support for:
 
 **Ceph Dashboard SSO**: The dashboard supports authentication via an external identity provider using the SAML 2.0 protocol.
 
+**Ceph FS Top Utility**: Used to provide extra CephFS metrics for monitoring in
+realtime. For more details, please refer:
+https://docs.ceph.com/en/quincy/cephfs/cephfs-top/
+
 ## Find koor-ceph-container image:
 
 The koor-ceph-container is hosted on [Koor's Docker Hub registry](https://hub.docker.com/repository/docker/koorinc/) and can be pulled using::
