@@ -1,0 +1,7 @@
+# Ceph versions to build images for
+# See https://docs.ceph.com/en/latest/releases/index.html
+
+# Ceph Pacific
+v16
+# Ceph Quincy
+v17
