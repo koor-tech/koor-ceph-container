@@ -31,5 +31,3 @@ RUN dnf install -y python3-pip xmlsec1 xmlsec1-nss xmlsec1-openssl && \
     REMOVED_SIZE=$((INITIAL_SIZE - FINAL_SIZE)) && \
     echo "Cleaning process removed ${REMOVED_SIZE}MB" && \
     echo "Dropped container size from ${INITIAL_SIZE}MB to ${FINAL_SIZE}MB";
-
-

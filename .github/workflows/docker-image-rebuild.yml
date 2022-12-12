@@ -25,6 +25,4 @@ jobs:
 
     - name: Build and Push the Docker image to DockerHub
       run: |
-        src/build-push-container-imgs-quincy.sh
-        src/build-push-container-imgs-pacific.sh
-
+        src/build-push-container-imgs.sh
