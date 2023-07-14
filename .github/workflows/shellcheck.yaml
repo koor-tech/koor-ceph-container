@@ -33,4 +33,3 @@ jobs:
         disable_matcher: false
         additional_files: build/reset build/sed-in-place
         format: gcc
-        

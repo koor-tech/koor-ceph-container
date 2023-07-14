@@ -9,12 +9,18 @@ Added functionality/ support for:
 * **Ceph FS Top Utility**: Used to provide extra CephFS metrics for monitoring in
 realtime. For more details, please refer: https://docs.ceph.com/en/quincy/cephfs/cephfs-top/
 
+## Ceph Versions
+
+We only rebuild the last 3 Ceph versions images as they are updated.
+
+For a list of the Ceph versions, see [`VERSIONS` file](/VERSIONS).
+
 ## Find koor-ceph-container image:
 
 The koor-ceph-container is hosted on [Koor's Docker Hub registry](https://hub.docker.com/repository/docker/koorinc/) and can be pulled using:
 
 ```console
-docker pull koorinc/koor-ceph-container:$VERSION_TAG
+docker pull docker.io/koorinc/koor-ceph-container:$VERSION_TAG
 ```
 
 Version tags can be found on [Koor's Docker Hub registry](https://hub.docker.com/repository/docker/koorinc/koor-ceph-container/tags?page=1&ordering=last_updated)
@@ -35,7 +41,7 @@ rebuilds them with dependencies and configurations needed for additional feature
 support using `src/Dockerfile` tagged as:
 
 ```console
-koorinc/koor-ceph-container:$RELEASE_VERSION
+docker.io/koorinc/koor-ceph-container:$RELEASE_VERSION
 ```
 
 The packaged images are based of CentOS. The rebuild image is then pushed to

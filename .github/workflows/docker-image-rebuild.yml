@@ -5,6 +5,9 @@ on:
     # Runs "At 11:45 every day" (see https://crontab.guru)
     - cron: '45 11 * * *'
 
+  # Allow running rebuilds manually
+  workflow_dispatch:
+
 jobs:
   build:
     runs-on: ubuntu-latest
