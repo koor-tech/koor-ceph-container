@@ -1,4 +1,6 @@
 .git/
 .github/
+.editorconfig
+.env
 LICENSE
 README.md
