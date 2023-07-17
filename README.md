@@ -49,6 +49,6 @@ The packaged images are based of CentOS. The rebuild image is then pushed to
 
 ## Contributing
 
-We recommend using the [Editorconfig plugin](https://editorconfig.org/#download) to auto configure your editor for the right indentation in this repo.
+We recommend using the [Editorconfig plugin](https://editorconfig.org/#download) to auto configure your editor for the right indentation in this repo. If you are using VSCode/Codium, it will be automatically recommended to you when you open the repository.
 
 Please open a pull request for any changes you want to make in this repository.
